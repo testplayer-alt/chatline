@@ -1,0 +1,16 @@
+{
+    "functions": {
+        "api/callback.py": {
+            "runtime": "python3.9"
+        }
+    },
+    "routes": [
+        {
+            "src": "/callback",
+            "dest": "api/callback.py",
+            "methods": [
+                "POST"
+            ]
+        }
+    ]
+}
