@@ -1,13 +1,13 @@
 {
     "functions": {
-        "api/callback.py": {
+        "api/main.py": {
             "runtime": "python3.9"
         }
     },
     "routes": [
         {
             "src": "/callback",
-            "dest": "api/callback.py",
+            "dest": "api/main.py",
             "methods": [
                 "POST"
             ]
