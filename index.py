@@ -3,6 +3,7 @@ import os
 import google.generativeai as genai
 import requests
 
+
 app = Flask(__name__)
 
 # LINE Messaging APIの設定
