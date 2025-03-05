@@ -3,14 +3,5 @@
         "main.py": {
             "runtime": "python3.10"
         }
-    },
-    "routes": [
-        {
-            "src": "/callback",
-            "dest": "main.py",
-            "methods": [
-                "POST"
-            ]
-        }
-    ]
+    }
 }
