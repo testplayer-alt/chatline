@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: your-app-name
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn index:app
+    envVars:
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        fromSecret: LINE_CHANNEL_ACCESS_TOKEN
+      - key: GOOGLE_API_KEY
+        fromSecret: GOOGLE_API_KEY
+    secrets:
+      - name: LINE_CHANNEL_ACCESS_TOKEN
+      - name: GOOGLE_API_KEY
