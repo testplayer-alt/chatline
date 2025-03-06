@@ -40,7 +40,10 @@ def callback():
                 response = model.generate_content(prompt)
                 reply_text = response.text
             except Exception as e:
-                reply_text = f"エラーが発生しました: {e}"
+                if "429 Resource has been exhausted" in str(e):
+                    reply_text = "ただいまAPIの利用上限に達しました。しばらく時間をおいてから再度お試しください。"
+                else:
+                    reply_text = f"エラーが発生しました: {e}"
             # LINEに返信
             send_line_reply(reply_token, reply_text)
     return 'OK'
