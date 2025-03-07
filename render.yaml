@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: your-app-name
+    name: your-app-name # 任意のアプリケーション名
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn index:app
